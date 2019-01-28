@@ -22,9 +22,9 @@ import (
 	aserver "gopkg.in/oauth2.v3/server"
 )
 
-// @title gin-auth2.0-swagger api 网关模板(带安全验证，令牌已设置4小时有效期)
+// @title gin-auth2.0-swagger api 网关模板
 // @version 2018.12.4
-// @description gin-auth2.0-swagger api 网关模板，带有负载均衡能力.
+// @description gin-auth2.0-swagger api 网关模板，带有负载均衡能力. (带安全验证，令牌已设置4小时有效期)
 // @termsOfService http://swagger.io/terms/
 
 // hide@contact.name API Support
