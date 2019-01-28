@@ -10,6 +10,11 @@ npm install -g yo
 npm install -g generator-gin-auth-swag
 ```
 
+当前项目没有发布到npm，以上命令可能执行失败，可以git clone在本地，然后使用以下命令
+```bash
+npm link
+```
+
 Then generate your new project:
 
 ```bash
