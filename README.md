@@ -25,6 +25,12 @@ yo gin-auth-swag
 ```bash
 swag init
 ```
+如果没有swag命令，请执行以下命令
+```bash
+go get -v -u github.com/swaggo/swag/cmd/swag
+cd $GOPATH/src/github.com/swaggo/swag/cmd/swag
+go install
+```
 
 尝试启动项目
 ```bash
