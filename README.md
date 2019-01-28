@@ -37,6 +37,8 @@ go install
 go run main.go DEV
 ```
 
+注意，如果localhost没有安装redis服务，模板将在验证auth2.0的时候失败
+
 ## Getting To Know Yeoman
 
  * Yeoman has a heart of gold.
