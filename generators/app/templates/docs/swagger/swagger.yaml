@@ -1,0 +1,62 @@
+basePath: /v1
+definitions:
+  httputil.HTTPError:
+    properties:
+      code:
+        example: 400
+        type: integer
+      message:
+        example: status bad request
+        type: string
+    type: object
+host: '{{.Host}}'
+info:
+  contact: {}
+  description: qc-app-api负载均衡网关.
+  license: {}
+  termsOfService: http://swagger.io/terms/
+  title: qc-app-api(带安全验证，令牌已设置4小时有效期)
+  version: 2018.12.4
+paths:
+  /Brand/GetList:
+    get:
+      consumes:
+      - application/json
+      description: 获取品牌
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - OAuth2Application:
+        - admin
+      summary: 获取品牌
+      tags:
+      - Brand 品牌
+securityDefinitions:
+  OAuth2Application:
+    flow: application
+    scopes:
+      admin: ' Grants read and write access to administrative information'
+      write: ' Grants write access'
+    tokenUrl: /oauth2/token
+    type: oauth2
+swagger: "2.0"
